@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../styles/auth.css">
+    <title>Change profile</title>
+</head>
+
+<body>
+    <div class="auth">
+        <h1>User Registration</h1>
+
+        <form method="POST" action="/change-profile" class="register-form">
+            <label>First Name:</label>
+            <input type="text" name="name" value="{{firstName}}" required>
+    
+            <label>Last Name:</label>
+            <input type="text" name="name" value="{{lastName}}" required>
+    
+            <label>Email:</label>
+            <input type="email" name="email" value="{{email}}" required>
+    
+            <label>Password:</label>
+            <input type="password" name="password" required>
+    
+            <label>Confirm Password:</label>
+            <input type="password" name="password" required>
+    
+            <button type="submit">Save</button>
+        </form>
+    </div>
+</body>
+
+</html>
