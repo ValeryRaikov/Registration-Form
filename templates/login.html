@@ -14,15 +14,14 @@
 
         <form method="POST" action="/register" class="login-form">
             <label>Email:</label>
-            <input type="email" name="email" required>
+            <input type="email" name="email" placeholder="Enter email address..." required>
 
             <label>Password:</label>
-            <input type="password" name="password" required>
+            <input type="password" name="password" placeholder="Enter password..." required>
 
             <label>CAPTCHA:</label>
-            <input type="text" name="captcha" required>
-
             <img src="{{captcha_code}}">
+            <input type="text" name="captcha" placeholder="Enter what you see..." required>
 
             <button type="submit">Register</button>
         </form>
