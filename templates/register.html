@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../styles/auth.css">
+    <title>Register</title>
+</head>
+
+<body>
+    <div class="auth">
+        <h1>User Registration</h1>
+
+        <form method="POST" action="/register" class="register-form">
+            <label>First Name:</label>
+            <input type="text" name="name" required>
+    
+            <label>Last Name:</label>
+            <input type="text" name="name" required>
+    
+            <label>Email:</label>
+            <input type="email" name="email" required>
+    
+            <label>Password:</label>
+            <input type="password" name="password" required>
+    
+            <label>Confirm Password:</label>
+            <input type="password" name="password" required>
+    
+            <label>CAPTCHA:</label>
+            <input type="text" name="captcha" required>
+    
+            <img src="{{captcha_code}}">
+    
+            <button type="submit">Register</button>
+        </form>
+
+        <p>Already have an account? Login <a href="http://localhost:3030/login">here</a></p>
+    </div>
+</body>
+
+</html>

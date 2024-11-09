@@ -1,0 +1,37 @@
+@import url('base.css');
+
+.site-nav {
+    background-color: #333;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.site-nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.site-nav a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.site-content {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.site-content h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.site-content h3 {
+    color: #666;
+}
