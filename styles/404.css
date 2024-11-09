@@ -1,0 +1,37 @@
+@import url('base.css');
+
+img {
+    max-width: 500px;
+    width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+div {
+    text-align: center;
+    margin-top: 220px;
+}
+
+h1 {
+    font-size: 4.5em;
+}
+
+h2 {
+    font-weight: 600;
+    color: #666;
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0073e6;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #005bb5;
+}
