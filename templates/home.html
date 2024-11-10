@@ -9,25 +9,12 @@
 </head>
 
 <body>
-    <nav class="site-nav">
-        <a href="/register">Register</a>
-        <a href="/login">Login</a>
-        <a href="/change-profile" class="logged-user">Change profile</a>
-        <a href="/logout" class="logged-user">Logout</a>
-    </nav>
+    <nav class="site-nav"></nav>
 
     <div class="site-content">
         <h1>This is the homepage of the application.</h1>
         <h3>Choose one of the following links to test its fucntionality...</h3>
     </div>
-
-    <script>
-        const loggedUserLinkElements = document.querySelectorAll('.logged-user');
-
-        if (!currentUser) {
-            loggedUserLinkElements.forEach(link => link.style.display = 'none');
-        }
-    </script>
 </body>
 
 </html>
