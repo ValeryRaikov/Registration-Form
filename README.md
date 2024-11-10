@@ -144,3 +144,8 @@ A dedicated error page shown when users attempt to access unavailable resources.
 ### -> CSS stylessheets
 
 Custom CSS3 styles for each of the HTML templates that ensures a visually engaging interface.
+
+# Project Setup
+To the test the project locally, simply clone the github repository and install the node modules required for the application by using the command `npm install` or `npm i`. After installing the required node modules, you can start the server using the `node server.js` command. To start Unittesting simply use `npx jest`.
+
+Enjoy :)
