@@ -23,14 +23,13 @@ This project is built to demonstrate core programming principles and does not ut
 - **Data Validation**: All user inputs, including names, email, and password, are validated to ensure correctness and security.
 - **Data Persistence**: Data is stored in a relational database (MySQL) for persistence and easy retrieval.
 - **Session Management**: Login, logout, and profile management functionalities are implemented to ensure secure access.
-- **Unit Testing**: Core functionalities are covered by unit tests to ensure reliability.
+- **Unit Testing**: Core functionalities are covered by unit tests to ensure reliability. **NOT PROVIDED**
 - **Custom CAPTCHA**: A custom CAPTCHA system is used to enhance security and protect against automated submissions.
 
 ## Technologies used:
 1. **Node.js**: Pure Node.js is used for the backend.
 2. **MySQL**: Relational database management system for storing user data.
 3. **HTML5 and CSS3**: HTML and CSS are used for the frontend providing a visually appealing user interface.
-4. **Jest and Supertest**: Used for unit and integration testing.
 
 # In depth project description
 
@@ -146,6 +145,6 @@ A dedicated error page shown when users attempt to access unavailable resources.
 Custom CSS3 styles for each of the HTML templates that ensures a visually engaging interface.
 
 # Project Setup
-To the test the project locally, simply clone the github repository and install the node modules required for the application by using the command `npm install` or `npm i`. After installing the required node modules, you can start the server using the `node server.js` command. To start Unittesting simply use `npx jest`.
+To the test the project locally, simply clone the github repository and install the node modules required for the application by using the command `npm install` or `npm i`. After installing the required node modules, you can start the server using the `node server.js` command.
 
 Enjoy :)
