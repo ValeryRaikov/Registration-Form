@@ -18,7 +18,7 @@ db.connect((err) => {
     console.log('Connected to MySQL database');
 });
 
-function executeQuery(query, params, callback) {
+const executeQuery = (query, params, callback) => {
     db.query(query, params, (err, results) => {
         if (err) {
             console.error('Error executing query:', err);
@@ -28,5 +28,16 @@ function executeQuery(query, params, callback) {
         callback(results);
     });
 }
+
+process.on('SIGINT', () => {
+    db.end((err) => {
+        if (err) {
+            console.error('Error closing MySQL connection:', err);
+        } else {
+            console.log('MySQL connection closed');
+        }
+        process.exit(err ? 1 : 0);
+    });
+});
 
 module.exports = { executeQuery };

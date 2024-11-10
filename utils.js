@@ -14,6 +14,10 @@ const hashPassword = (password) => {
     return crypto.createHash('sha256').update(password).digest('hex');
 };
 
+const comparePasswords = (plainPassword, hashedPassword) => {
+    return hashPassword(plainPassword) === hashedPassword;
+};
+
 const generateCaptcha = () => {
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let captcha = '';
@@ -41,5 +45,6 @@ module.exports = {
     validateEmail, 
     validatePassword, 
     hashPassword, 
+    comparePasswords,
     generateCaptcha, 
 };
