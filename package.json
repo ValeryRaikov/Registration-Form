@@ -4,5 +4,9 @@
     "dotenv": "^16.4.5",
     "mysql": "^2.18.1",
     "mysql2": "^3.11.4"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
   }
 }
