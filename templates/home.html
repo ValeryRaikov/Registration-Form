@@ -10,16 +10,24 @@
 
 <body>
     <nav class="site-nav">
-        <a href="http://localhost:3030/register">Register</a>
-        <a href="http://localhost:3030/login">Login</a>
-        <a href="http://localhost:3030/change-profile">Change profile</a>
-        <a href="http://localhost:3030/logout">Logout</a>
+        <a href="/register">Register</a>
+        <a href="/login">Login</a>
+        <a href="/change-profile" class="logged-user">Change profile</a>
+        <a href="/logout" class="logged-user">Logout</a>
     </nav>
 
     <div class="site-content">
         <h1>This is the homepage of the application.</h1>
         <h3>Choose one of the following links to test its fucntionality...</h3>
     </div>
+
+    <script>
+        const loggedUserLinkElements = document.querySelectorAll('.logged-user');
+
+        if (!currentUser) {
+            loggedUserLinkElements.forEach(link => link.style.display = 'none');
+        }
+    </script>
 </body>
 
 </html>
