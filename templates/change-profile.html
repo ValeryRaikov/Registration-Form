@@ -12,12 +12,12 @@
     <div class="auth">
         <h1>User Registration</h1>
 
-        <form method="POST" action="/change-profile" class="register-form">
+        <form method="POST" action="/change-profile" class="change-profile-form">
             <label>First Name:</label>
-            <input type="text" name="name" value="{{firstName}}" required>
+            <input type="text" name="firstName" value="{{firstName}}" required>
     
             <label>Last Name:</label>
-            <input type="text" name="name" value="{{lastName}}" required>
+            <input type="text" name="lastName" value="{{lastName}}" required>
     
             <label>Email:</label>
             <input type="email" name="email" value="{{email}}" required>
@@ -26,7 +26,7 @@
             <input type="password" name="password" required>
     
             <label>Confirm Password:</label>
-            <input type="password" name="password" required>
+            <input type="password" name="confirmPassword" required>
     
             <button type="submit">Save</button>
         </form>
