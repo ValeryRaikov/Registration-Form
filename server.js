@@ -115,6 +115,12 @@ const handleRegistration = (req, res) => {
         const data = querystring.parse(body);
         const { email, firstName, lastName, password, confirmPassword, captcha } = data;
 
+        if (!utils.validateName(firstName) || !utils.validateName(lastName)) {
+            res.writeHead(400, { 'Content-Type': 'text/html' });
+            res.end('Invalid first name or last name.');
+            return;
+        }
+
         if (!utils.validateEmail(email) || !utils.validatePassword(password, confirmPassword)) {
             res.writeHead(400, { 'Content-Type': 'text/html' });
             res.end('Invalid email or password.');
@@ -131,7 +137,7 @@ const handleRegistration = (req, res) => {
         db.executeQuery(
             'INSERT INTO users (firstName, lastName, email, password) VALUES (?, ?, ?, ?)',
             [firstName, lastName, email, hashedPassword],
-            (insertResult) => {
+            () => {
                 db.executeQuery(
                     'SELECT * FROM users WHERE id = LAST_INSERT_ID()',
                     [],
@@ -250,6 +256,12 @@ const handleProfileUpdate = (req, res) => {
         if (!firstName || !lastName || !email) {
             res.writeHead(400, { 'Content-Type': 'text/html' });
             res.end('First name, last name, and email are required.');
+            return;
+        }
+
+        if (!utils.validateName(firstName) || !utils.validateName(lastName)) {
+            res.writeHead(400, { 'Content-Type': 'text/html' });
+            res.end('Invalid first name or last name.');
             return;
         }
 

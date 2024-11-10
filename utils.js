@@ -1,9 +1,14 @@
 const crypto = require('crypto');
 const { createCanvas } = require('canvas'); 
 
+const validateName = (name) => {
+    const nameRegex = /^[A-Za-z]+$/;
+    return nameRegex.test(name) && name.length <= 100;
+}
+
 const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
+    return emailRegex.test(email) && email.length <= 100;
 };
 
 const validatePassword = (password, confirmPassword) => {
@@ -42,6 +47,7 @@ const generateCaptcha = () => {
 };
 
 module.exports = { 
+    validateName,
     validateEmail, 
     validatePassword, 
     hashPassword, 
